@@ -1,0 +1,43 @@
+<p>listarticletable works!</p>
+<html>
+    <body>
+        <!--bouton-->
+        <!---->
+        <!--<button type="button" class="btn btn-success" routerLink="articles/articles/listarticletable">Nouveau</button><Success--mazall mayimchich-->
+            
+
+
+           <!--hatha boutton li ismo Nouveau bch yhizik l page "createarticle" bch t3mar les arrtibuts li 3andik fi page haki wo b3ad y3mil insertion des données fi page hasib l boutton lintinzil 3alih intiiii-->
+           
+           <button type="button" class="btn btn-success" routerLink="/articles/createarticle">Nouveau</button>
+          
+        <h1>liste Produits ( {{tabproduit.length}})</h1>
+        <!--<table datatable class="row-border hover"  //classe tb3a lil bootstrap -->
+            <table *ngIf="tabproduit.length" datatable class="table table-hover table-striped table-bordered mb-5">
+<thead>
+    <tr >
+        
+        <th>Image</th>
+        <th>Référence</th>
+        <th>Désignation</th>
+        <th>Marque</th>
+        <th>Prix</th>
+        <th>Quantité</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor="let pr of tabproduit ; index as i"><!-- /*boucle fi angular *//n3mlo var pr fi tab produit n3mlo affichage min 5ilalha///affichagedima tsir bil affichge.ngFor-->
+    
+    <td><img src="{{pr.imageart}}" width="80" height="80"/></td>
+    <td>{{pr.reference}}</td>
+    <td>{{pr.designation}}</td>
+    <td>{{pr.marque}}</td>
+    <td>{{pr.prix}}</td>
+    <td>{{pr.qtestock}}</td>
+    <td><input type="button" value="Modifier" class="btn btn-info" [routerLink]="['/articles/editarticle/',pr._id]"></td>
+    <td><button class="btn btn-danger" (click)="deleteprd(pr._id)">Supprimer</button></td>  
+</tr></tbody> </table>
+    </body>
+</html>

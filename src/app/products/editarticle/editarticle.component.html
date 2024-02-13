@@ -1,0 +1,50 @@
+<p>editarticle works!</p>
+<div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="modifarticle()"><!----------------------mouch kif----------------------------------------->
+    <div class="form-group col-sm-4">
+    <label for="reference">reference</label>
+    <input type="text" name="reference" class="form-control" [(ngModel)]="article.reference" >
+    </div>
+    <div class="form-group col-sm-4">
+    <label for="designation">designation</label>
+    <input type="text" name="designation" class="form-control" [(ngModel)]="article.designation" >
+    </div>
+    <div class="form-group col-sm-4">
+    <label for="prixAchat">prixAchat</label>
+    <input type="number" name="prixAchat" class="form-control" [(ngModel)]="article.prix" >
+    </div>
+    <div class="form-group col-sm-4">
+    <label for="marque">marque</label>
+    <input type="text" name="marque"
+    class="form-control" [(ngModel)]="article.marque" >
+    </div>
+    <div class="form-group col-sm-4">
+    <label for="qtestock">qtestock</label>
+    <input type="number" name="qtestock" class="form-control" [(ngModel)]="article.qtestock" >
+    </div>
+    <div class="form-group">
+    <div class="col-sm-4">
+    <input type="text" readonly class="form-control" name="imageartpetitf" [(ngModel)]="article.imageart" >
+    <div *ngIf="article.imageart!=null"> <img src="{{article.imageart}}" width="50" height="50"/></div>
+    </div>
+</div>
+<table>
+<tr>
+<td>
+<div class="form-group">
+<label for="scategorieID">sous categories</label>
+<select name="scategorieID" class="form-controlclass"
+[(ngModel)]="article.scategorieID" >
+<option *ngFor="let sd of tabscat" value="{{sd._id}}">{{sd.nomscategorie}}</option>
+</select>
+</div>
+</td>
+</tr>
+</table>
+<!--button Modifier-->
+<div class="form-group col-sm-4">
+<button type="submit" class="btn btn-dark"><i class="fa fa-database"></i>Modifier</button>
+</div>
+</form>
+</div>
+    

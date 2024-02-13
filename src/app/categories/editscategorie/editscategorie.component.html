@@ -1,0 +1,23 @@
+<p>editscategorie works!</p>
+<html>
+    <body>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>nomeditscategorie</th>
+                    <th>imageeditscategorie</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr *ngFor="let editcat of listeditcat">
+
+            <td>{{editcat.nomeditscategorie}}</td>
+            <td><img src="{{editcat.imageeditscategorie}}" width="80" height="80"/></td>
+
+            <td><button class="btn btn-warning">Modifier</button></td>
+            <td><button class="btn brn-warning">Supprimer</button></td>
+        </tr>
+        </table>
+    </body>
+</html>

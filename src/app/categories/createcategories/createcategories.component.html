@@ -1,0 +1,36 @@
+
+<!--création d'un formaulaire-->
+<!--copy min lien bootstrap5 ==>form==>formcontrol-->
+<h2>Ajouter un categorie</h2>
+<!--n9smo 5dima mt3na-->
+<div class="mobile-form">
+<div class="mb-3">
+    <label for="id" class="form-label">ID</label>
+    <input type="text" class="form-control" name="id" id="id" [(ngModel)]="categories._id" placeholder="id"/>
+  </div>
+  <div class="mb-3">
+    <label for="nomcat" class="form-label">nomscategorie</label>
+    <input type="text" class="form-control" id="nomcat" name="nomcat" [(ngModel)]="categories.nomcategorie" placeholder="nomscategorie">
+  </div><!--fayda tbdal id wo placeholder-->
+  <div class="mb-3">
+    <label for="imageacat" class="form-label">imagescategorie</label>
+    <input type="text" class="form-control" id="imageacat" name="imageacat" [(ngModel)]="categories.imagecategorie" placeholder="imagescategorie">
+  </div><!--fayda tbdal id wo placeholder-->
+  <div class="mb-3">
+    <label for="catID" class="form-label">categorieID</label>
+    <input type="text" class="form-control" id="catID" name="catID" [(ngModel)]="categories.__v" placeholder="categorieID">
+  </div><!--fayda tbdal id wo placeholder-->
+ 
+   
+  <!--créer un bouton avec lien bootstrap5-->
+  <div>
+    <button type="button" class="btn btn-success" (click)="Sauvegarder()">Enregister</button><!--Success--><!---------------------->
+    <!--starha bil ahmar 5atir mazal m3amiltilhach création fi composant//.ts et donc appler a la méthode()-->
+  </div>
+  <div>
+    <button type="button" class="btn btn-info">Info</button><!--Info-->
+  </div>
+</div>
+ 
+
+  

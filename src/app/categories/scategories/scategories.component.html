@@ -1,0 +1,32 @@
+
+<html>
+    <body>
+        <!--table class="table table-striped" 1classe tb3a lil bootstrap -->
+        <h1>liste scategories ({{listScategorie.length}})</h1>
+        <table *ngIf="listScategorie.length" datatable class="table table-hover table-striped table-bordered mb-5">
+<thead>
+    <tr >
+        
+        
+       
+        <th>nomscategorie</th>
+        <th>imagescategorie</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+        
+      
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor="let pr of listScategorie"> <!-- /*boucle fi angular *//n3mlo var pr fi tab produit n3mlo affichage min 5ilalha///affichagedima tsir bil affichge.ngFor-->
+    
+    <td>{{pr.nomscategorie}}</td>
+    <td><img src="{{pr.imagescategorie}}" width="80" height="80"/></td>
+    
+    
+    <td><button class="btn btn-warning">Modifier</button></td><!-- class:::classe tab3a lil bootstrap -->
+    <td><button class="btn btn-danger">Supprimer</button></td>
+</tr></tbody>
+        </table>
+    </body>
+</html>

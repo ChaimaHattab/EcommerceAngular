@@ -1,0 +1,30 @@
+<html>
+    <body>
+      <!--bouton-->
+      <!---->
+      <button type="button" class="btn btn-success" routerLink="categories/categories/listcategories">Nouveau</button><!--Success-->
+        <!--table class="table table-striped">classe tb3a lil bootstrap-->
+        <h1>liste categories({{listListcategories.length}})</h1>
+        <table  *ngIf="listListcategories.length"  datatable class="table table-hover table-striped table-bordered mb-5">
+<thead>
+    <tr >
+        
+        <th>nomcategorie</th>
+        <th>imagecategorie</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+      
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor="let listcat of listListcategories"><!--boucle fi angular *//n3mlo var pr fi tab produit n3mlo affichage min 5ilalha///affichagedima tsir bil affichge.ngFor-->
+   
+    <td>{{listcat.nomcategorie}}</td>
+    <td><img src="{{listcat.imagecategorie}}" width="80" height="80"/></td>
+
+    <td><button class="btn btn-warning">Modifier</button></td><!--class:::classe tab3a lil bootstrap-->
+    <td><button class="btn btn-danger">Supprimer</button></td>
+</tr></tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+
+
+<h2>Ajouter un article</h2>
+<!--création d'un formaulaire!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!===>pour ajouter ces attributs al page idiqué-->
+<!--copy min lien bootstrap5 ==>form==>formcontrol-->
+<!--n9smo 5dima mt3na-->
+<div class="mobile-form">
+<div class="mb-3">
+    <label for="reference" class="form-label">Référence</label>
+    <input type="text" class="form-control" name="reference" id="reference" [(ngModel)]="produit.reference" placeholder="reference"/>
+  </div>
+  <div class="mb-3">
+    <label for="designation" class="form-label">Désignation</label>
+    <input type="text" class="form-control" id="designation" name="designation" [(ngModel)]="produit.designation" placeholder="Désignation">
+  </div><!--fayda tbdal id wo placeholder-->
+  <div class="mb-3">
+    <label for="prix" class="form-label">Prix</label>
+    <input type="text" class="form-control" id="prix" name="prix" [(ngModel)]="produit.prix"  placeholder="Prix">
+  </div><!--fayda tbdal id wo placeholder--><!--id nhotoha kima isim champ::for-->
+  <div class="mb-3">
+    <label for="marque" class="form-label">Marque</label>
+    <input type="text" class="form-control" id="marque" name="marque" [(ngModel)]="produit.marque"  placeholder="Marque">
+  </div><!--fayda tbdal id wo placeholder-->
+  <div class="mb-3">
+    <label for="quantite" class="form-label">Quantite</label>
+    <input type="number" class="form-control" id="quantite" name="quantite" [(ngModel)]="produit.qtestock" placeholder="qtestock">
+  </div><!--fayda tbdal id wo placeholder-->
+  <div class="mb-3">
+    <label for="scategorie" class="form-label">Sous Categorie</label>
+    <input type="text" class="form-control" id="scategorie" name="scategorie" [(ngModel)]="produit.scategorieID" placeholder="Sous_Categorie">
+  </div><!--fayda tbdal id wo placeholder-->
+  <div class="mb-3">
+    <label for="imageart" class="form-label">Image</label>
+    <input type="text" class="form-control" id="imageart" name="imageart" [(ngModel)]="produit.imageart" placeholder="imagearticle">
+  </div><!--fayda tbdal id wo placeholder-->
+  <!--créer un bouton avec lien bootstrap5-->
+  <div>
+    <!--hna 3atitha path mthaa bch t3mil insertion fi page listearticletable 1////b3ad fi listart::ana 3amilt deux bouutons Enregistrer wo kol wahid 3atito path mt3oo-->
+    <!--NB::::tab3 méthode sauveagarder() mawjouda fi createarticle.componenet.ts-->
+    <button type="button" class="btn btn-success" (click)="sauvegarder()" routerLink="/articles/listarticletable">Enregister</button><!--Success--><!---------------------->
+    <button type="button" class="btn btn-success" (click)="sauvegarder()" routerLink="/articles/listart">Enregistrer</button>
+    <!--starha bil ahmar 5atir mazal m3amiltilhach création fi composant//.ts et donc appler a la méthode()-->
+  </div>
+  <div>
+    <!--b3ad nitlha bih mazilt ma5dimtouch-->
+    <button type="button" class="btn btn-info">Info</button><!--Info-->
+  </div>
+</div>
+ 
+
+  

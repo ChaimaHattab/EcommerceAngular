@@ -1,0 +1,41 @@
+<html>
+    <body>
+
+        <h1>liste des Articles ( {{tabproduit.length}})</h1>
+        <!--table class="table table-striped"> //classe tb3a lil bootstrap -->
+
+
+        <!--hatha bouton li ismo "Ajouter un produit" ====>bch yhizik li page createarticle pour ajputer unn produit fi page hati wo inti wo boutton li tinzil 3alih-->
+        <div><button class="btn btn-success" routerLink="/articles/createarticle"   >Ajouter Un Produit</button></div>
+
+        
+        <table *ngIf="tabproduit.length" datatable class="table table-hover table-striped table-bordered mb-5">
+<thead>
+    <tr >
+        
+        <th>Image</th>
+        <th>Référence</th>
+        <th>Désignation</th>
+        <th>Marque</th>
+        <th>Prix</th>
+        <th>Quantité</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor="let pr of tabproduit "><!-- /*boucle fi angular *//n3mlo var pr fi tab produit n3mlo affichage min 5ilalha///affichage dima tsir bil affichge *ngFor-->
+   
+    <td><img src={{pr.imageart}} width="80" height="80"/></td>
+    <td>{{pr.reference}}</td>
+    <td>{{pr.designation}}</td>
+    <td>{{pr.marque}}</td>
+    <td>{{pr.prix}}</td>
+    <td>{{pr.qtestock}}</td>
+    <td><input type="button" value="Modifier" class="btn btn-info btn-sm" [routerLink]="['/articles/editarticle/',pr._id]"></td><!--31/01/2024-->
+    <td><button class="btn btn-danger" (click)="deleteprd(pr._id)">Supprimer</button></td>   
+    <!--<td><button class="btn btn-danger">Supprimer</button>-->
+</tr></tbody>
+        </table>
+    </body>
+</html>
